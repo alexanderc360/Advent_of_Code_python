@@ -1,0 +1,10 @@
+advent-of-code-data==2.0.1
+aocd-example-parser==2023.2
+beautifulsoup4==4.12.2
+browser-cookie3==0.19.1
+jeepney==0.8.0
+lz4==4.3.2
+Pebble==5.0.3
+pycryptodomex==3.19.0
+soupsieve==2.5
+urllib3==2.0.7

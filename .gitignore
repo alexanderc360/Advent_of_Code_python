@@ -1,0 +1,4 @@
+# Inputs
+*.txt
+AOCvenv/
+!requirements.txt
