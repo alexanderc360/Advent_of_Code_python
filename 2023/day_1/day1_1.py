@@ -1,9 +1,9 @@
 import os
 import re
-os.system("aocd > AOC2023/Day_1/input.txt")
-os.system("aocd -e > AOC2023/Day_1/exampleAnswers.txt")
-input = open("AOC2023/Day_1/input.txt")
-example = open("AOC2023/Day_1/example.txt")
+os.system("aocd 2023 1 > ./2023/day_1/input.txt")
+os.system("aocd 2023 1 -e > ./2023/day_1/exampleAnswers.txt")
+input = open("./2023/day_1/input.txt")
+example = open("./2023/day_1/example.txt")
 
 workingData = input  # change to try example
 # workingData = example  # change to try example

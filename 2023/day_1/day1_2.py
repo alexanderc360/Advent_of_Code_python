@@ -1,6 +1,6 @@
 import re
-input = open("AOC2023/Day_1/input.txt")
-example = open("AOC2023/Day_1/example.txt")
+input = open("./2023/day_1/input.txt")
+example = open("./2023/day_1/example.txt")
 
 workingData = input  # change to try example
 # workingData = example  # change to try example
