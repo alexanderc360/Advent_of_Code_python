@@ -1,10 +1,21 @@
 import re
-input = open("AOC2023/Day_2/input.txt")
-example = open("AOC2023/Day_2/example.txt")
+input = open("./2023/day_2/input.txt")
+example = open("./2023/day_2/example.txt")
 
-# workingData = input  # change to try example
-workingData = example  # change to try example
+workingData = input  # change to try example
+# workingData = example  # change to try example
 
-buff = []
+games = []
 for i in workingData:
-    print(i)
+    games.append(i[i.find(':') + 2:].strip())
+
+sum = 0
+for i in games:
+    vals = {"red": 0, "green": 0, "blue": 0}
+    numbers = [int(i) for i in re.findall(r"\d+", i)]
+    colors = re.findall(r"(?=(red|green|blue))", i)
+    for j in range(len(colors)):
+        if numbers[j] >= vals[colors[j]]:
+            vals[colors[j]] = numbers[j]
+    sum += (vals["red"] * vals["green"] * vals["blue"] ) 
+print(sum)
