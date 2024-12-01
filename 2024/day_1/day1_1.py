@@ -1,5 +1,4 @@
 # Part 1
-from operator import le
 import os
 
 os.system("aocd 2024 1 > ./2024/day_1/input.txt")
