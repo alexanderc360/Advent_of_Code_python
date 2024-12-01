@@ -29,7 +29,6 @@ os.system("aocd {year} {day} -e > ./{year}/day_{day}/exampleAnswers.txt")
 input = open("./{year}/day_{day}/input.txt")
 example = open("./{year}/day_{day}/example.txt")
 
-
 # workingData = input.readlines()  # change to try example
 workingData = example.readlines()  # change to try example
 '''
@@ -37,7 +36,6 @@ workingData = example.readlines()  # change to try example
 part2 = f'''# Part 2
 input = open("./{year}/day_{day}/input.txt")
 example = open("./{year}/day_{day}/example.txt")
-
 
 workingData = input.readlines()  # change to try example
 workingData = example.readlines()  # change to try example
@@ -56,7 +54,7 @@ for f in neccesaryFiles:
     if not os.path.exists(f'{year}/day_{day}/{f}'):
         with open(f'{year}/day_{day}/{f}', 'w'):
             pass
-if not os.path.exists(f'{year}/day_{day}/day{day}_1'):
+if not os.path.exists(f'{year}/day_{day}/day{day}_1.py'):
     with open(f'{year}/day_{day}/day{day}_1.py', 'w') as f:
         f.write(part1)
     f.close()
