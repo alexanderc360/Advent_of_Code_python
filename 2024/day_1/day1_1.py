@@ -1,5 +1,6 @@
 # Part 1
 import os
+from aocd import _impartial_submit
 
 os.system("aocd 2024 1 > ./2024/day_1/input.txt")
 os.system("aocd 2024 1 -e > ./2024/day_1/exampleAnswers.txt")
@@ -10,15 +11,8 @@ example = open("./2024/day_1/example.txt")
 workingData = input.readlines()  # change to try example
 # workingData = example.readlines()  # change to try example
 
-left, right = [], []
-for line in workingData:
-    l, r = [int(i) for i in line.strip().split()]
-    left.append(l)
-    right.append(r)
-left.sort()
-right.sort()
+left, right = zip(*(map(int, line.strip().split()) for line in workingData))
+answer = sum(abs(l - r) for l, r in zip(sorted(left), sorted(right)))
 
-count = 0
-for i in range(len(left)):
-    count += abs(left[i] - right[i])
-print(count)
+# uncomment when ready to submit
+_impartial_submit(answer, day=1, year=2024)
